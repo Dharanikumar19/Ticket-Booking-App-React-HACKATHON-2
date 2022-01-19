@@ -24,7 +24,6 @@ function AdminDashboard() {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
                 await axios.delete(`https://ticket-booking-app-nodejs.herokuapp.com/theaters/${id}`)
-                window.location.reload();
                 fetchTheaters();
             }
         } catch (error) {
