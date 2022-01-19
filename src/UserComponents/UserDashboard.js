@@ -67,6 +67,14 @@ function UserDashboard() {
                     </li>
 
                     <li class="nav-item">
+                        <Link class="nav-link collapsed" to={"/bookingstatus"} data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo">
+                            <i class="fas fa-book"></i>
+                            <span>Booking Status</span>
+                        </Link>
+                    </li>
+
+                    <li class="nav-item">
                         <Link class="nav-link collapsed" to="/" data-toggle="collapse" data-target="#collapseTwo"
                             aria-expanded="true" aria-controls="collapseTwo">
                             <i class="fas fa-fw fa-sign-out"></i>
