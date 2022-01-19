@@ -12,7 +12,7 @@ function AdminDashboard() {
 
     let fetchTheaters = async () => {
         try {
-            let allTheaters = await axios.get("http://localhost:3000/theaters")
+            let allTheaters = await axios.get("https://ticket-booking-app-nodejs.herokuapp.com/theaters")
             setTheaterList(allTheaters.data)
         } catch (error) {
             console.log(error)
@@ -23,7 +23,7 @@ function AdminDashboard() {
         try {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
-                await axios.delete(`http://localhost:3000/theaters/${id}`)
+                await axios.delete(`https://ticket-booking-app-nodejs.herokuapp.com/theaters/${id}`)
                 window.location.reload();
                 fetchTheaters();
             }

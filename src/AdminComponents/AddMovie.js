@@ -15,7 +15,7 @@ function AddMovie() {
         onSubmit: async (values) => {
     
           try {
-           await axios.post("http://localhost:3000/create-movies", values)
+           await axios.post("https://ticket-booking-app-nodejs.herokuapp.com/create-movies", values)
             navigate("/movielist")
           } catch (error) {
             console.log(error)

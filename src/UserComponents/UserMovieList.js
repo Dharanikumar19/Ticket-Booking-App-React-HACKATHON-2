@@ -14,7 +14,7 @@ function UserMoviesList() {
 
   let fetchMovies = async () => {
       try {
-          let allMovies = await axios.get("http://localhost:3000/movies")
+          let allMovies = await axios.get("https://ticket-booking-app-nodejs.herokuapp.com/movies")
           setMovieList(allMovies.data)
       } catch (error) {
           console.log(error)

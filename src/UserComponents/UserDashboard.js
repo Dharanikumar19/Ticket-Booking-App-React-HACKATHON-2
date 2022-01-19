@@ -7,7 +7,7 @@ function UserDashboard() {
     const [theaterList, setTheaterList] = useState([])
     useEffect(async () => {
         try {
-            let dashboard = await axios.get("http://localhost:3000/userdashboard", {
+            let dashboard = await axios.get("https://ticket-booking-app-nodejs.herokuapp.com/userdashboard", {
                 headers: {
                     Authorization: window.localStorage.getItem("my_token")
                 }
@@ -25,7 +25,7 @@ function UserDashboard() {
 
     let fetchTheaters = async () => {
         try {
-            let allTheaters = await axios.get("http://localhost:3000/theaters")
+            let allTheaters = await axios.get("https://ticket-booking-app-nodejs.herokuapp.com/theaters")
             setTheaterList(allTheaters.data)
         } catch (error) {
             console.log(error)

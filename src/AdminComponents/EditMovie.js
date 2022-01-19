@@ -28,7 +28,7 @@ function EditMovie() {
         onSubmit: async (values) => {
             delete values._id;
             try {
-                await axios.put(`http://localhost:3000/movies/${params.id}`,values)
+                await axios.put(`https://ticket-booking-app-nodejs.herokuapp.com/movies/${params.id}`,values)
             navigate("/movielist")
               } catch (error) {
                 console.log(error)
