@@ -9,7 +9,7 @@ function EditMovie() {
     const navigate = useNavigate()
     useEffect(async () => {
         try {
-            let movieData = await axios.get(`http://localhost:3000/movies/${params.id}`)
+            let movieData = await axios.get(`https://ticket-booking-app-nodejs.herokuapp.com/movies/${params.id}`)
             formik.setValues(movieData.data)
         } catch (error) {
             console.log(error)
