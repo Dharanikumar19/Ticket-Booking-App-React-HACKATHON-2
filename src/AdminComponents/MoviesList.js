@@ -25,7 +25,6 @@ function MoviesList() {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
                 await axios.delete(`https://ticket-booking-app-nodejs.herokuapp.com/movies/${id}`)
-                window.location.reload();
                 fetchMovies();
             }
         } catch (error) {
